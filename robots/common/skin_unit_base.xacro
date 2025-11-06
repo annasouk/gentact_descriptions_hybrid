@@ -36,16 +36,20 @@
       <child link="${robot_namespace}_sensor_${sensor_number}" />
     </joint>
     <link name="${robot_namespace}_sensor_${sensor_number}">
-      <visual>
-        <geometry>
-          <sphere radius="${sensor_radius}" /> <!-- [m] -->
-        </geometry>
-      </visual>
-      <collision>
-        <geometry>
-          <sphere radius="${sensor_radius}" /> <!-- [m] -->
-        </geometry>
-      </collision>
+      <xacro:if value="${sensor_radius > 0.0}">
+        <visual>
+          <geometry>
+            <sphere radius="${sensor_radius}" /> <!-- [m] -->
+          </geometry>
+        </visual>
+      </xacro:if>
+      <xacro:if value="${sensor_radius > 0.0}">
+        <collision>
+          <geometry>
+            <sphere radius="${sensor_radius}" /> <!-- [m] -->
+          </geometry>
+        </collision>
+      </xacro:if>
     </link>
   </xacro:macro>
 </robot>

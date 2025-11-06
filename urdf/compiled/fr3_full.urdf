@@ -1015,7 +1015,7 @@
     </visual>
     <collision name="fr3_hand_collision">
       <geometry>
-        <mesh filename="package://franka_description/meshes/robot_ee/franka_hand_white/collision/hand.stl"/>
+        <mesh filename="package://gentact_descriptions/meshes/robot_ee/franka_hand_white/collision/hand.stl"/>
       </geometry>
     </collision>
     <inertial>

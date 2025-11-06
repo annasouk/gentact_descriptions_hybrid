@@ -23,7 +23,7 @@
             <param name="state_following_offset">0.0</param>
           </xacro:if>
 
-          <xacro:if value="${gazebo and not (str(use_fake_hardware).lower() == 'true')}">
+          <xacro:if value="${gazebo}">
             <plugin>franka_ign_ros2_control/IgnitionSystem</plugin>
           </xacro:if>
 
@@ -101,7 +101,7 @@
 
 
     </ros2_control>
-    <xacro:if value="${gazebo and not (str(use_fake_hardware).lower() == 'true')}">
+    <xacro:if value="${gazebo}">
       <gazebo>
         <plugin filename="franka_ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
           <parameters>$(find franka_gazebo_bringup)/config/franka_gazebo_controllers.yaml</parameters>
