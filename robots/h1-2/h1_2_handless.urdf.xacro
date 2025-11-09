@@ -386,10 +386,10 @@
     <limit lower="-2.35" upper="2.35" effort="200" velocity="23"/>
   </joint>
 
-  <xacro:include filename="./skin/torso_skin.xacro" />
+  <xacro:include filename="skin/torso_skin.xacro" />
   <xacro:torso_skin parent="torso_link" namespace="torso" />
 
-  <xacro:include filename="./skin/head_skin.xacro" />
+  <xacro:include filename="skin/head_skin.xacro" />
   <xacro:head_skin parent="torso_link" namespace="head" />
 
   <!-- L arm -->
