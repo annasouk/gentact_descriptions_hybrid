@@ -1,0 +1,33 @@
+robot:
+  arm_id: "fr3"
+  arm_prefix: "" # Reserved for future use (e.g., robot unique prefix)
+  fake_sensor_commands: "false" # Enable fake sensor commands for simulation
+  joint_state_rate: 30 # Publishing rate for joint states (Hz)
+  load_gripper: "true" # Enable Franka Gripper ("true" or "false")
+  namespace: "" # Namespace for robot, any string (empty string allowed - meaningful names recommended)
+  robot_ip: "192.168.0.100" # Robot's IP address or hostname
+  urdf_file: "fr3/fr3_full_skin.urdf.xacro" # Relative path to URDF in franka_description/robots
+  use_fake_hardware: "false" # Use simulated hardware ("true" or "false")
+  use_rviz: "false" # Launch RViz if "true" (single instance for all namespaces)
+
+sensors:
+  # All links defined as in xacro: i.e. '${robot.arm_id}_${link_name}' -> 'fr3_link1'
+  # Launch will search for these links and activate if they are found in the xacro file.
+  link1_skin: # The name of the link needs to match the name of the link in the xacro file. ex: <link name="link1"/>
+    active: false
+    xacro: "" # Defined relative to the gentact_ros_tools package. Leave empty to not display.
+  link2_skin:
+    active: true
+    xacro: "../skin/link2_base.xacro" # Defined relative to the gentact_ros_tools package. Leave empty to not display.
+  link3_skin:
+    active: true
+    xacro: "../skin/link3_base.xacro" # Defined relative to the gentact_ros_tools package. Leave empty to not display.
+  link4_skin:
+    active: true
+    xacro: "../skin/link4_base.xacro" # Defined relative to the gentact_ros_tools package. Leave empty to not display.
+  link5_skin:
+    active: true
+    xacro: "../skin/link5_base.xacro" # Defined relative to the gentact_ros_tools package. Leave empty to not display. Defined from robot xacro file.
+  link6_skin:
+    active: true
+    xacro: "../skin/link6_base.xacro" # Defined relative to the gentact_ros_tools package. Leave empty to not display. Defined from robot xacro file.
