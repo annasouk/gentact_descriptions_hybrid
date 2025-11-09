@@ -401,7 +401,7 @@
     </visual>
   </link>
   <joint name="torso_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="torso_link"/>
     <child link="torso_skin"/>
   </joint>
@@ -503,7 +503,7 @@
     </visual>
   </link>
   <joint name="head_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="torso_link"/>
     <child link="head_skin"/>
   </joint>
@@ -624,7 +624,7 @@
     </visual>
   </link>
   <joint name="left_shoulder_roll_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_shoulder_roll_link"/>
     <child link="left_shoulder_roll_skin"/>
   </joint>
@@ -731,7 +731,7 @@
     </visual>
   </link>
   <joint name="left_shoulder_yaw_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_shoulder_yaw_link"/>
     <child link="left_shoulder_yaw_skin"/>
   </joint>
@@ -822,7 +822,7 @@
     </visual>
   </link>
   <joint name="left_elbow_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_elbow_link"/>
     <child link="left_elbow_skin"/>
   </joint>
@@ -1052,7 +1052,7 @@
     </visual>
   </link>
   <joint name="right_shoulder_roll_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_shoulder_roll_link"/>
     <child link="right_shoulder_roll_skin"/>
   </joint>
@@ -1159,7 +1159,7 @@
     </visual>
   </link>
   <joint name="right_shoulder_yaw_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_shoulder_yaw_link"/>
     <child link="right_shoulder_yaw_skin"/>
   </joint>
@@ -1250,7 +1250,7 @@
     </visual>
   </link>
   <joint name="right_elbow_base_joint" type="fixed">
-    <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_elbow_link"/>
     <child link="right_elbow_skin"/>
   </joint>
