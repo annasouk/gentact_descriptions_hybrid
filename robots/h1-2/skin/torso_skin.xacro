@@ -6,7 +6,7 @@
 <xacro:macro name="torso_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
-    <xacro:property name="mesh_file" value="package://gentact_descriptions/h1-2/meshes/skin/torso_skin.stl" />
+    <xacro:property name="mesh_file" value="meshes/skin/torso_skin.stl" />
     <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
     <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
     <xacro:property name="body_height" value="0.0" /> <!-- [m] -->

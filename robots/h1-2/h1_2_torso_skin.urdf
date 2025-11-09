@@ -396,7 +396,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/torso_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/torso_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -498,7 +498,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/head_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/head_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -619,7 +619,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/shoulder_roll_L_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/shoulder_roll_L_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -726,7 +726,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/shoulder_yaw_L_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/shoulder_yaw_L_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -817,7 +817,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/elbow_L_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/elbow_L_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -1047,7 +1047,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/shoulder_roll_R_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/shoulder_roll_R_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -1154,7 +1154,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/shoulder_yaw_R_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/shoulder_yaw_R_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -1245,7 +1245,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/h1-2/meshes/skin/elbow_R_skin.stl" scale="1 1 1"/>
+        <mesh filename="meshes/skin/elbow_R_skin.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
