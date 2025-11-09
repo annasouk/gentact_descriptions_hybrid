@@ -3,10 +3,10 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <!-- Macro definition for skin unit -->
-<xacro:macro name="elbow_L_skin" params="parent namespace">
+<xacro:macro name="elbow_R_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
-    <xacro:property name="mesh_file" value="meshes/skin/elbow_L_skin.stl" />
+    <xacro:property name="mesh_file" value="meshes/skin/elbow_R_skin.stl" />
     <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
     <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
     <xacro:property name="body_height" value="0.0" /> <!-- [m] -->
