@@ -11,7 +11,7 @@
   <!-- inertials: description of the inertials that comes from a YAML file. Example definition: ${xacro.load_yaml('$(find gentact_descriptions)/robots/fr3/inertials.yaml')} -->
   <!-- dynamics: description of the dynamics that comes from a YAML file. Example definition: ${xacro.load_yaml('$(find gentact_descriptions)/robots/fr3/dynamics.yaml')} -->
 
-  <xacro:macro name="franka_arm" params="arm_id arm_prefix:='' no_prefix:=false description_pkg:='gentact_descriptions' connected_to:='base' xyz:='0 0 0' rpy:='0 0 0' gazebo:='false' safety_distance:=0 joint_limits inertials kinematics dynamics with_sc:=false, link1_skin:='' link2_skin:='' link3_skin:='' link4_skin:='' link5_skin:='' link6_skin:=''">
+  <xacro:macro name="franka_arm" params="arm_id arm_prefix:='' no_prefix:=false description_pkg:='gentact_descriptions' connected_to:='base' xyz:='0 0 0' rpy:='0 0 0' gazebo:='false' safety_distance:=0 joint_limits inertials kinematics dynamics with_sc:=false, link1_skin:='' link2_skin:='' link3_skin:='' link4_skin:='' link5_front_skin:='' link5_back_skin:='' link6_skin:=''">
 
     <!-- Define a property that defaults to 'arm_prefix_arm_id' concatenated with an underscore if 'no_prefix' is not set -->
     <xacro:property name="prefix" value="${'' if no_prefix else arm_prefix + arm_id + '_'}" />
@@ -136,10 +136,16 @@
       <xacro:franka-dynamics name="joint5" config="${dynamics}" />
     </joint>
 
-    <xacro:property name="link5_skin_value" value="$(arg link5_skin)" />
-    <xacro:if value="${link5_skin_value != ''}">
-      <xacro:include filename="$(arg link5_skin)" />
-      <xacro:link5_skin parent="${prefix}link5" namespace="link5" />
+   <xacro:property name="link5_front_skin_value" value="$(arg link5_front_skin)" />
+    <xacro:if value="${link5_front_skin_value != ''}">
+      <xacro:include filename="$(arg link5_front_skin)" />
+      <xacro:link5_front_skin parent="${prefix}link5" namespace="link5_front" />
+    </xacro:if>
+
+    <xacro:property name="link5_back_skin_value" value="$(arg link5_back_skin)" />
+    <xacro:if value="${link5_back_skin_value != ''}">
+      <xacro:include filename="$(arg link5_back_skin)" />
+      <xacro:link5_back_skin parent="${prefix}link5" namespace="link5_back" />
     </xacro:if>
 
     <xacro:link_with_sc no_prefix="${no_prefix}" name="link6" gazebo="${gazebo}" with_sc="${with_sc}">

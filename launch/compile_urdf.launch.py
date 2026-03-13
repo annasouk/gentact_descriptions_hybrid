@@ -12,7 +12,7 @@ import yaml
 def load_config(config_file_name, context):
     package_share = FindPackageShare('gentact_ros_tools').perform(context)
     config_file = os.path.join(package_share, 'config', config_file_name)
-    
+    print(f'config file name: {config_file}') 
     with open(config_file, 'r') as file:
         config = yaml.safe_load(file)
     
@@ -28,6 +28,7 @@ def build_robot_description(config):
         if isinstance(sensor_config, dict) and sensor_config.get('xacro', '') != '':
             xacro_path = sensor_config.get('xacro', '')
             urdf_args.append(f'{sensor_key}:={xacro_path}')
+            print(f'xacro path -- {xacro_path}')
 
     # Add end effector mesh if specified in config
     if isinstance(config['robot']['end_effector'], dict) and config['robot']['end_effector'].get('active', False):
@@ -36,6 +37,7 @@ def build_robot_description(config):
             urdf_args.append(f'ee_xacro_file:={ee_xacro}')
     
     urdf_file = PathJoinSubstitution([FindPackageShare('gentact_descriptions'), config['robot']['robot_xacro']])
+    print(f'urdf args: {urdf_args}')    
     xacro_command = ['xacro ', urdf_file] + urdf_args
     robot_description = ParameterValue(
         Command(xacro_command), 
@@ -47,12 +49,14 @@ def build_robot_description(config):
 def launch_setup(context, *args, **kwargs):
     # Get the config file name from launch configuration
     config_file_name = LaunchConfiguration('config').perform(context)
+    print(f"debug config file: {config_file_name}")
     config = load_config(config_file_name, context)
 
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     # Build robot description
     robot_description, urdf_file, urdf_args = build_robot_description(config)
+    print("robot description built")
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -60,11 +64,11 @@ def launch_setup(context, *args, **kwargs):
         output='screen',
         parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_description}]
     )
-    
+    print("robot state publisher intiated")
     # Resolve paths in context
     package_share = FindPackageShare('gentact_ros_tools').perform(context)
     urdf_file_resolved = urdf_file.perform(context)
-    
+    print("urdf file resolved")    
     # Use source directory instead of install directory
     # Get the source directory by going up from package_share: install/gentact_ros_tools/share/gentact_ros_tools -> src/gentact_ros_tools
     install_dir = os.path.dirname(os.path.dirname(os.path.dirname(package_share)))  # Remove share/gentact_ros_tools
@@ -72,9 +76,10 @@ def launch_setup(context, *args, **kwargs):
     src_dir = os.path.join(workspace_root, 'src')
     source_package_dir = os.path.join(src_dir, 'gentact_ros_tools')
     
-    output_file_resolved = os.path.join(source_package_dir, 'urdf', 'compiled', 'robot.urdf')
+    output_file_resolved = os.path.join(source_package_dir, 'urdf', 'compiled', 'fr3_hybrid_skin.urdf')
     output_dir_resolved = os.path.join(source_package_dir, 'urdf', 'compiled')
-    
+    print(f"debug output: {output_dir_resolved}")
+
     # Ensure output directory exists
     mkdir_cmd = ['mkdir', '-p', output_dir_resolved]
     
