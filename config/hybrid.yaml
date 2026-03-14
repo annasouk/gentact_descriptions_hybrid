@@ -21,7 +21,7 @@ sensors:
   # All links defined as in xacro: i.e. '${robot.arm_id}_${link_name}' -> 'fr3_link1'
   # Launch will search for these links and activate if they are found in the xacro file.
   link1_skin: # The name of the link needs to match the name of the link in the xacro file. ex: <link name="link1"/>
-    active: false
+    active: true
     type: "SPAD"
     SN: "S1" # Serial number of the sensor
     num_sensors: 6

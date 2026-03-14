@@ -8,7 +8,7 @@ import yaml
 import xacro
 
 def load_config(config_file_name, context):
-    package_share = FindPackageShare('gentact_descriptions').perform(context)
+    package_share = FindPackageShare('gentact_descriptions_hybrid').perform(context)
     config_file = os.path.join(package_share, 'config', config_file_name)
     
     with open(config_file, 'r') as file:
@@ -36,7 +36,7 @@ def build_robot_description(config, context):
     robot_config = config.get('robot', {})
     sensors_config = config.get('sensors', {})
 
-    gentact_descriptions_share = FindPackageShare('gentact_descriptions').perform(context)
+    gentact_descriptions_share = FindPackageShare('gentact_descriptions_hybrid').perform(context)
     urdf_relative_path = robot_config.get('urdf_file', '')
     if not urdf_relative_path:
         raise ValueError('Robot configuration must define "urdf_file".')
@@ -75,14 +75,14 @@ def launch_setup(context, *args, **kwargs):
     robot_description = build_robot_description(config, context)
 
     # Resolve paths in context
-    package_share = FindPackageShare('gentact_descriptions').perform(context)
+    package_share = FindPackageShare('gentact_descriptions_hybrid').perform(context)
 
     # Use source directory instead of install directory
-    # Get the source directory by going up from package_share: install/gentact_descriptions/share/gentact_descriptions -> src/gentact_descriptions
-    install_dir = os.path.dirname(os.path.dirname(os.path.dirname(package_share)))  # Remove share/gentact_descriptions
+    # Get the source directory by going up from package_share: install/gentact_descriptions_hybrid/share/gentact_descriptions_hybrid -> src/gentact_descriptions_hybrid
+    install_dir = os.path.dirname(os.path.dirname(os.path.dirname(package_share)))  # Remove share/gentact_descriptions_hybrid
     workspace_root = os.path.dirname(install_dir)  # Go up one more level to get workspace root
     src_dir = os.path.join(workspace_root, 'src')
-    source_package_dir = os.path.join(src_dir, 'gentact_descriptions')
+    source_package_dir = os.path.join(src_dir, 'gentact_descriptions_hybrid')
 
     output_dir_resolved = os.path.join(source_package_dir, 'urdf', 'compiled')
     output_file_resolved = os.path.join(output_dir_resolved, 'robot.urdf')

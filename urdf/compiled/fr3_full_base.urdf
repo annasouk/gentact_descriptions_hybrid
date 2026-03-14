@@ -22,12 +22,12 @@
   <link name="fr3_link0">
     <visual name="fr3_link0_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link0.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link0.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link0_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link0.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link0.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -40,12 +40,12 @@
   <link name="fr3_link1">
     <visual name="fr3_link1_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link1.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link1.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link1_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link1.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -67,12 +67,12 @@
   <link name="fr3_link2">
     <visual name="fr3_link2_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link2.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link2.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link2_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link2.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -95,7 +95,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/skin/self-cap/link2_fancy.stl" scale="1 1 1"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/skin/self-cap/link2_fancy.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -248,12 +248,12 @@
   <link name="fr3_link3">
     <visual name="fr3_link3_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link3.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link3.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link3_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link3.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link3.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -276,7 +276,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/skin/self-cap/link3_fancy.stl" scale="1 1 1"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/skin/self-cap/link3_fancy.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -449,12 +449,12 @@
   <link name="fr3_link4">
     <visual name="fr3_link4_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link4.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link4.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link4_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link4.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link4.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -477,7 +477,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/skin/self-cap/link4_fancy.stl" scale="1 1 1"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/skin/self-cap/link4_fancy.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -610,12 +610,12 @@
   <link name="fr3_link5">
     <visual name="fr3_link5_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link5.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link5.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link5_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link5.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link5.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -638,7 +638,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/skin/spad/link5_spad.stl" scale="1 1 1"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/skin/spad/link5_spad.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -811,12 +811,12 @@
   <link name="fr3_link6">
     <visual name="fr3_link6_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link6.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link6.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link6_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link6.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link6.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -839,7 +839,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/skin/self-cap/link6_big.stl" scale="1 1 1"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/skin/self-cap/link6_big.stl" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
@@ -972,12 +972,12 @@
   <link name="fr3_link7">
     <visual name="fr3_link7_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/visual/link7.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/visual/link7.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_link7_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_arms/fr3/collision/link7.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_arms/fr3/collision/link7.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1010,12 +1010,12 @@
   <link name="fr3_hand">
     <visual name="fr3_hand_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_ee/franka_hand_white/visual/hand.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_ee/franka_hand_white/visual/hand.dae"/>
       </geometry>
     </visual>
     <collision name="fr3_hand_collision">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_ee/franka_hand_white/collision/hand.stl"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_ee/franka_hand_white/collision/hand.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1034,7 +1034,7 @@
   <link name="fr3_leftfinger">
     <visual name="fr3_leftfinger_visual">
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_ee/franka_hand_white/visual/finger.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_ee/franka_hand_white/visual/finger.dae"/>
       </geometry>
     </visual>
     <!-- screw mount -->
@@ -1075,7 +1075,7 @@
     <visual name="fr3_rightfinger_visual">
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://gentact_descriptions/meshes/robot_ee/franka_hand_white/visual/finger.dae"/>
+        <mesh filename="package://gentact_descriptions_hybrid/meshes/robot_ee/franka_hand_white/visual/finger.dae"/>
       </geometry>
     </visual>
     <!-- screw mount -->

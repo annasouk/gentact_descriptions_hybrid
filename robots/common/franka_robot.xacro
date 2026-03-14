@@ -26,7 +26,7 @@
                       gazebo_effort:=false
                       no_prefix:='false'
                       arm_prefix:=''
-                      description_pkg:='gentact_descriptions'
+                      description_pkg:='gentact_descriptions_hybrid'
                       connected_to:='base'
                       link1_skin:=''
                       link2_skin:=''
@@ -36,9 +36,9 @@
                       link5_back_skin:=''
                       link6_skin:=''">
                       
-    <xacro:include filename="$(find gentact_descriptions)/robots/common/utils.xacro" />
+    <xacro:include filename="$(find gentact_descriptions_hybrid)/robots/common/utils.xacro" />
 
-    <xacro:include filename="$(find gentact_descriptions)/robots/common/franka_arm.xacro" />
+    <xacro:include filename="$(find gentact_descriptions_hybrid)/robots/common/franka_arm.xacro" />
 
     <xacro:franka_arm
       arm_id="${arm_id}"
@@ -64,8 +64,8 @@
     />
 
     <xacro:if value="${hand and ee_id == 'franka_hand'}">
-      <xacro:include filename="$(find gentact_descriptions)/end_effectors/common/franka_hand.xacro"/>
-      <xacro:include filename="$(find gentact_descriptions)/end_effectors/common/utils.xacro" />
+      <xacro:include filename="$(find gentact_descriptions_hybrid)/end_effectors/common/franka_hand.xacro"/>
+      <xacro:include filename="$(find gentact_descriptions_hybrid)/end_effectors/common/utils.xacro" />
       <xacro:if value="${arm_id == 'fp3'}">
         <xacro:property name="ee_color" value="black" />
       </xacro:if>
@@ -79,7 +79,7 @@
         arm_id="${arm_id}"
         arm_prefix="${arm_prefix}"
         ee_id="${ee_id}_${ee_color}"
-        ee_inertials="${xacro.load_yaml('$(find gentact_descriptions)/end_effectors/' + ee_id + '/inertials.yaml')}"
+        ee_inertials="${xacro.load_yaml('$(find gentact_descriptions_hybrid)/end_effectors/' + ee_id + '/inertials.yaml')}"
         rpy_ee="${rpy_ee}"
         xyz_ee="${xyz_ee}"
         tcp_xyz="${tcp_xyz}"
@@ -92,8 +92,8 @@
     </xacro:if>
 
     <xacro:if value="${hand and ee_id != 'none' and ee_id != 'franka_hand'}">
-      <xacro:include filename="$(find gentact_descriptions)/end_effectors/common/ee_with_one_link.xacro"/>
-      <xacro:include filename="$(find gentact_descriptions)/end_effectors/common/utils.xacro" />
+      <xacro:include filename="$(find gentact_descriptions_hybrid)/end_effectors/common/ee_with_one_link.xacro"/>
+      <xacro:include filename="$(find gentact_descriptions_hybrid)/end_effectors/common/utils.xacro" />
       <xacro:property name="special_connection" value="${special_connection}" />
       <xacro:property name="connection" value="${special_connection if special_connection == '' else arm_id + '_link8'}" />
       <xacro:ee_with_one_link
@@ -101,7 +101,7 @@
         arm_id="${arm_id}"
         arm_prefix="${arm_prefix}"
         ee_id="${ee_id}"
-        ee_inertials="${xacro.load_yaml('$(find gentact_descriptions)/end_effectors/${ee_id}/inertials.yaml')}"
+        ee_inertials="${xacro.load_yaml('$(find gentact_descriptions_hybrid)/end_effectors/${ee_id}/inertials.yaml')}"
         rpy_ee="${rpy_ee}"
         xyz_ee="${xyz_ee}"
         tcp_xyz="${tcp_xyz}"
@@ -168,7 +168,7 @@
     </xacro:if>
 
     <xacro:if value="${ros2_control}">
-      <xacro:include filename="$(find gentact_descriptions)/robots/common/franka_arm.ros2_control.xacro"/>
+      <xacro:include filename="$(find gentact_descriptions_hybrid)/robots/common/franka_arm.ros2_control.xacro"/>
       <xacro:franka_arm_ros2_control
           arm_id="${arm_id}"
           robot_ip="${robot_ip}"

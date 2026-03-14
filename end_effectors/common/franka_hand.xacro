@@ -11,7 +11,7 @@
                        tcp_rpy:='0 0 0'
                        safety_distance:=0
                        gazebo:=false
-                       description_pkg:=gentact_descriptions
+                       description_pkg:=gentact_descriptions_hybrid
                        with_sc:=false
                        no_prefix:=false">
     <xacro:property name="ee_prefix" default="robot_"/>

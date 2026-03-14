@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from glob import glob
 import os
 
-package_name = 'gentact_descriptions'
+package_name = 'gentact_descriptions_hybrid'
 
 # Function to recursively get all files in a directory
 def get_data_files_recursive(base_dir, target_dir):
