@@ -25,7 +25,7 @@
     body_height="${body_height}"
     use_mesh_file="${use_mesh_file}"
     mesh_file="${mesh_file}">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="-0.0342 0.2095 -0.43358" rpy="0 0 0" />
     </xacro:dermis_base_macro>
 
 

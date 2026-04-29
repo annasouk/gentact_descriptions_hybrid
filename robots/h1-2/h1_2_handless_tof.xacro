@@ -5,7 +5,7 @@
 <!-- xacro for ToF Skins made by Nick J. -->
 
   <!-- Properties -->
-  <xacro:property name="mesh_dir" value="meshes" />
+  <xacro:property name="mesh_dir" value="package://gentact_ros_tools_hybrid/meshes/h1_2" />
 
   <!-- Material colors -->
   <xacro:property name="material_grey" value="0.1 0.1 0.1 1" />
@@ -13,13 +13,13 @@
 
   <!-- Material macro -->
   <xacro:macro name="material_grey">
-    <material>
+    <material name="grey">
       <color rgba="${material_grey}"/>
     </material>
   </xacro:macro>
 
   <xacro:macro name="material_white">
-    <material>
+    <material name="white">
       <color rgba="${material_white}"/>
     </material>
   </xacro:macro>
