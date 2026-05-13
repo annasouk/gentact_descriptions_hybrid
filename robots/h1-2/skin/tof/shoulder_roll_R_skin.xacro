@@ -6,7 +6,7 @@
 <xacro:macro name="shoulder_roll_R_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
-    <xacro:property name="mesh_file" value="package://gentact_descriptions_hybrid/robots/h1-2/meshes/skin/tof/shoulder_roll_R_skin.stl" />
+    <xacro:property name="mesh_file" value="meshes/skin/shoulder_roll_R_skin.stl" />
     <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
     <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
     <xacro:property name="body_height" value="0.0" /> <!-- [m] -->
@@ -25,7 +25,7 @@
     body_height="${body_height}"
     use_mesh_file="${use_mesh_file}"
     mesh_file="${mesh_file}">
-    <origin xyz="-0.0342 0.2095 -0.43358" rpy="0 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:dermis_base_macro>
 
 
@@ -35,10 +35,10 @@
         sensor_number="0"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.977189"
-        normal_y="0.212370"
-        normal_z="0.001000">
-        <origin xyz="-0.033 0.049 -0.099" rpy="-1.566 -0.001 0.214" />
+        normal_x="1.574"
+        normal_y="0.016"
+        normal_z="1.618">
+        <origin xyz="0.019 -0.001 0.022" rpy="-1.574 -0.072 -1.524" />
     </xacro:self_cap_sensor>
 
 
@@ -48,10 +48,10 @@
         sensor_number="1"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.991169"
-        normal_y="0.132608"
-        normal_z="-0.000000">
-        <origin xyz="-0.026 -0.049 -0.100" rpy="1.570 0.000 0.133" />
+        normal_x="0.095"
+        normal_y="-1.642"
+        normal_z="-2.656">
+        <origin xyz="0.015 0.031 -0.046" rpy="-1.642 -0.107 -0.982" />
     </xacro:self_cap_sensor>
 
 
@@ -61,10 +61,10 @@
         sensor_number="2"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.046658"
-        normal_y="-0.996317"
-        normal_z="0.071938">
-        <origin xyz="0.017 -0.000 -0.028" rpy="-1.574 -0.072 -1.524" />
+        normal_x="-0.066"
+        normal_y="-1.636"
+        normal_z="2.606">
+        <origin xyz="0.013 -0.034 -0.049" rpy="1.637 -0.095 0.962" />
     </xacro:self_cap_sensor>
 
 
@@ -74,10 +74,10 @@
         sensor_number="3"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.569302"
-        normal_y="0.816638"
-        normal_z="0.094857">
-        <origin xyz="0.012 -0.026 -0.091" rpy="1.637 -0.095 0.962" />
+        normal_x="1.561"
+        normal_y="-0.021"
+        normal_z="1.671">
+        <origin xyz="0.019 -0.000 -0.100" rpy="-1.561 0.100 -1.470" />
     </xacro:self_cap_sensor>
 
 
@@ -87,11 +87,12 @@
         sensor_number="4"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.537327"
-        normal_y="-0.836837"
-        normal_z="0.104807">
-        <origin xyz="0.008 0.032 -0.085" rpy="-1.638 -0.105 -1.000" />
+        normal_x="-1.566"
+        normal_y="-0.001"
+        normal_z="0.214">
+        <origin xyz="-0.039 0.052 -0.112" rpy="-1.566 -0.001 0.214" />
     </xacro:self_cap_sensor>
+
 
     <xacro:self_cap_sensor
         robot_namespace="${namespace}"
@@ -99,22 +100,10 @@
         sensor_number="5"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.537327"
-        normal_y="-0.836837"
-        normal_z="0.104807">
-        <origin xyz="0.013 -0.035 -0.006" rpy="1.637 -0.095 0.964" />
-    </xacro:self_cap_sensor>
-
-    <xacro:self_cap_sensor
-        robot_namespace="${namespace}"
-        parent="${namespace}_skin"
-        sensor_number="6"
-        sensor_radius="${sensor_radius}"
-        sensor_length="0.0"
-        normal_x="0.537327"
-        normal_y="-0.836837"
-        normal_z="0.104807">
-        <origin xyz="0.011 0.037 -0.002" rpy="-1.508 0.094 -0.984" />
+        normal_x="1.572"
+        normal_y="0.000"
+        normal_z="-0.184">
+        <origin xyz="-0.041 -0.052 -0.113" rpy="1.572 0.000 -0.184" />
     </xacro:self_cap_sensor>
 
     </xacro:macro>
