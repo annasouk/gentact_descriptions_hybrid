@@ -513,8 +513,8 @@
     <limit lower="-0.95" upper="3.18" effort="18" velocity="20"/>
   </joint>
 
-  <!-- <xacro:include filename="./skin/elbow_L_skin.xacro" /> -->
-  <!-- <xacro:elbow_L_skin parent="left_elbow_link" namespace="left_elbow" /> -->
+  <xacro:include filename="./skin/tof/elbow_L_skin.xacro" />
+  <xacro:elbow_L_skin parent="left_elbow_link" namespace="left_elbow" />
 
   <link name="left_wrist_roll_link">
     <inertial>
@@ -687,8 +687,8 @@
   </joint>
 
 
-  <!-- <xacro:include filename="./skin/shoulder_yaw_R_skin.xacro" /> -->
-  <!-- <xacro:shoulder_yaw_R_skin parent="right_shoulder_yaw_link" namespace="right_shoulder_yaw" /> -->
+  <xacro:include filename="./skin/tof/shoulder_yaw_R_skin.xacro" />
+  <xacro:shoulder_yaw_R_skin parent="right_shoulder_yaw_link" namespace="right_shoulder_yaw" />
 
   <link name="right_elbow_link">
     <inertial>
@@ -718,7 +718,7 @@
     <limit lower="-0.95" upper="3.18" effort="18" velocity="20"/>
   </joint>
 
-  <!-- <xacro:include filename="./skin/elbow_R_skin.xacro" /> -->
+  <!-- <xacro:include filename="./skin/tof/elbow_R_skin.xacro" /> -->
   <!-- <xacro:elbow_R_skin parent="right_elbow_link" namespace="right_elbow" /> -->
 
   <link name="right_wrist_roll_link">
