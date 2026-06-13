@@ -3,7 +3,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <!-- Macro definition for skin unit -->
-<xacro:macro name="shoulder_roll_R_skin" params="parent namespace">
+<xacro:macro name="shoulder_roll_L_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
     <xacro:property name="mesh_file" value="${mesh_dir}/skin/tof/shoulder_roll_L_skin.stl" />

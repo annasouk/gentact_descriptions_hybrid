@@ -451,8 +451,8 @@
     <limit lower="-0.38" upper="3.4" effort="40" velocity="9"/>
   </joint>
 
-  <!-- <xacro:include filename="./skin/shoulder_roll_L_skin.xacro" /> -->
-  <!-- <xacro:shoulder_roll_L_skin parent="left_shoulder_roll_link" namespace="left_shoulder_roll" /> -->
+  <xacro:include filename="./skin/tof/shoulder_roll_L_skin.xacro" />
+  <xacro:shoulder_roll_L_skin parent="left_shoulder_roll_link" namespace="left_shoulder_roll" />
 
   <link name="left_shoulder_yaw_link">
     <inertial>
