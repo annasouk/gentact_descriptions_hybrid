@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
-
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="h1_2">
 
-<!-- xacro for ToF Skins made by Nick J. -->
-
   <!-- Properties -->
-  <xacro:property name="mesh_dir" value="package://gentact_ros_tools_hybrid/meshes/h1_2" />
+  <xacro:property name="mesh_dir" value="package://gentact_ros_tools_hybrid/meshes/h1_2/" />
 
   <!-- Material colors -->
   <xacro:property name="material_grey" value="0.1 0.1 0.1 1" />
@@ -13,13 +10,13 @@
 
   <!-- Material macro -->
   <xacro:macro name="material_grey">
-    <material name="grey">
+    <material>
       <color rgba="${material_grey}"/>
     </material>
   </xacro:macro>
 
   <xacro:macro name="material_white">
-    <material name="white">
+    <material>
       <color rgba="${material_white}"/>
     </material>
   </xacro:macro>
@@ -159,6 +156,10 @@
     <axis xyz="0 1 0"/>
     <limit lower="-0.12" upper="2.19" effort="300" velocity="14"/>
   </joint>
+
+  <xacro:include filename="./skin/tof/hip_roll_L_skin.xacro" />
+  <xacro:hip_roll_L_skin parent="left_hip_roll_link" namespace="left_hip_roll" />
+
   <link name="left_ankle_pitch_link">
     <inertial>
       <origin xyz="-0.000294 0 -0.010794" rpy="0 0 0"/>
@@ -207,6 +208,9 @@
     <axis xyz="1 0 0"/>
     <limit lower="-0.261799" upper="0.261799" effort="40" velocity="9"/>
   </joint>
+
+  <xacro:include filename="./skin/tof/knee_L_skin.xacro" />
+  <xacro:knee_L_skin parent="left_knee_link" namespace="left_knee" />
 
   <!-- R Leg -->
   <link name="right_hip_yaw_link">
@@ -284,6 +288,10 @@
     <axis xyz="1 0 0"/>
     <limit lower="-3.14" upper="0.43" effort="200" velocity="23"/>
   </joint>
+
+  <xacro:include filename="./skin/tof/hip_roll_R_skin.xacro" />
+  <xacro:hip_roll_R_skin parent="right_hip_roll_link" namespace="right_hip_roll" />
+
   <link name="right_knee_link">
     <inertial>
       <origin xyz="0.000179 -0.000121 -0.168936" rpy="0 0 0"/>
@@ -311,6 +319,10 @@
     <axis xyz="0 1 0"/>
     <limit lower="-0.12" upper="2.19" effort="300" velocity="14"/>
   </joint>
+
+  <xacro:include filename="./skin/tof/knee_R_skin.xacro" />
+  <xacro:knee_R_skin parent="right_knee_link" namespace="right_knee" />
+
   <link name="right_ankle_pitch_link">
     <inertial>
       <origin xyz="-0.000294 0 -0.010794" rpy="0 0 0"/>
@@ -389,11 +401,13 @@
     <limit lower="-2.35" upper="2.35" effort="200" velocity="23"/>
   </joint>
 
-  <!-- <xacro:include filename="skin/torso_skin.xacro" /> -->
-  <!-- <xacro:torso_skin parent="torso_link" namespace="torso" /> -->
+  <!--
+  <xacro:include filename="skin/tof/torso_skin.xacro" />
+  <xacro:torso_skin parent="torso_link" namespace="torso" />
+  -->
 
-  <!-- <xacro:include filename="skin/head_skin.xacro" /> -->
-  <!-- <xacro:head_skin parent="torso_link" namespace="head" /> -->
+  <xacro:include filename="skin/tof/head_skin.xacro" />
+  <xacro:head_skin parent="torso_link" namespace="head" />
 
   <!-- L arm -->
   <link name="left_shoulder_pitch_link">
@@ -482,8 +496,8 @@
     <limit lower="-2.66" upper="3.01" effort="18" velocity="20"/>
   </joint>
 
-  <!-- <xacro:include filename="./skin/shoulder_yaw_L_skin.xacro" /> -->
-  <!-- <xacro:shoulder_yaw_L_skin parent="left_shoulder_yaw_link" namespace="left_shoulder_yaw" /> -->
+  <xacro:include filename="./skin/tof/shoulder_yaw_L_skin.xacro" />
+  <xacro:shoulder_yaw_L_skin parent="left_shoulder_yaw_link" namespace="left_shoulder_yaw" />
 
   <link name="left_elbow_link">
     <inertial>
@@ -653,7 +667,6 @@
     <limit lower="-3.4" upper="0.38" effort="40" velocity="9"/>
   </joint>
 
-<!-- Shoulder Roll R Skin -->
   <xacro:include filename="./skin/tof/shoulder_roll_R_skin.xacro" />
   <xacro:shoulder_roll_R_skin parent="right_shoulder_roll_link" namespace="right_shoulder_roll" />
 
@@ -718,8 +731,8 @@
     <limit lower="-0.95" upper="3.18" effort="18" velocity="20"/>
   </joint>
 
-  <!-- <xacro:include filename="./skin/tof/elbow_R_skin.xacro" /> -->
-  <!-- <xacro:elbow_R_skin parent="right_elbow_link" namespace="right_elbow" /> -->
+  <xacro:include filename="./skin/tof/elbow_R_skin.xacro" />
+  <xacro:elbow_R_skin parent="right_elbow_link" namespace="right_elbow" />
 
   <link name="right_wrist_roll_link">
     <inertial>

@@ -6,7 +6,7 @@
 <xacro:macro name="shoulder_roll_R_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
-    <xacro:property name="mesh_file" value="${mesh_dir}/skin/tof/shoulder_roll_R_skin.stl" />
+    <xacro:property name="mesh_file" value="${mesh_dir}skin/tof/shoulder_roll_R_skin.stl" />
     <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
     <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
     <xacro:property name="body_height" value="0.0" /> <!-- [m] -->
@@ -16,7 +16,13 @@
     <!-- Included URDF Files (NEEDED FOR BASE SKIN UNIT) -->
     <xacro:include filename="$(find gentact_descriptions_hybrid)/robots/common/skin_unit_base.xacro" />
 
-    <!-- Instantiate dermis once -->
+    <!--
+      Sensor origins below (xyz/rpy) are authored in the shoulder_roll link's
+      local frame, so dermis origin stays at identity. The mesh STL itself was
+      exported in robot world frame; the visualizer detects this via h1_link
+      and bakes verts world->local automatically (see ProximityVisualizer
+      _load_skin_meshes h1-shoulder branch).
+    -->
     <xacro:dermis_base_macro
     robot_namespace="${namespace}"
     parent="${parent}"
@@ -35,9 +41,9 @@
         sensor_number="0"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="1.574"
-        normal_y="0.016"
-        normal_z="1.618">
+        normal_x="0.046658"
+        normal_y="-0.996317"
+        normal_z="0.071938">
         <origin xyz="0.019 -0.001 0.022" rpy="-1.574 -0.072 -1.524" />
     </xacro:self_cap_sensor>
 
@@ -48,9 +54,9 @@
         sensor_number="1"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.095"
-        normal_y="-1.642"
-        normal_z="-2.656">
+        normal_x="0.552184"
+        normal_y="-0.826854"
+        normal_z="0.106796">
         <origin xyz="0.015 0.031 -0.046" rpy="-1.642 -0.107 -0.982" />
     </xacro:self_cap_sensor>
 
@@ -61,9 +67,9 @@
         sensor_number="2"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="-0.066"
-        normal_y="-1.636"
-        normal_z="2.606">
+        normal_x="0.569302"
+        normal_y="0.816638"
+        normal_z="0.094857">
         <origin xyz="0.013 -0.034 -0.049" rpy="1.637 -0.095 0.962" />
     </xacro:self_cap_sensor>
 
@@ -74,10 +80,10 @@
         sensor_number="3"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="1.561"
-        normal_y="-0.021"
-        normal_z="1.671">
-        <origin xyz="0.019 -0.000 -0.100" rpy="-1.561 0.100 -1.470" />
+        normal_x="0.100123"
+        normal_y="-0.989954"
+        normal_z="-0.099833">
+        <origin xyz="0.019 0.000 -0.100" rpy="-1.561 0.100 -1.470" />
     </xacro:self_cap_sensor>
 
 
@@ -87,9 +93,9 @@
         sensor_number="4"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="-1.566"
-        normal_y="-0.001"
-        normal_z="0.214">
+        normal_x="0.977189"
+        normal_y="0.212370"
+        normal_z="0.001000">
         <origin xyz="-0.039 0.052 -0.112" rpy="-1.566 -0.001 0.214" />
     </xacro:self_cap_sensor>
 
@@ -100,9 +106,9 @@
         sensor_number="5"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="1.572"
-        normal_y="0.000"
-        normal_z="-0.184">
+        normal_x="0.983120"
+        normal_y="-0.182964"
+        normal_z="0.000000">
         <origin xyz="-0.041 -0.052 -0.113" rpy="1.572 0.000 -0.184" />
     </xacro:self_cap_sensor>
 

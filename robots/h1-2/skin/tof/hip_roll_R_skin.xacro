@@ -2,11 +2,11 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<!-- Macro definition for right elbow skin unit -->
-<xacro:macro name="elbow_R_skin" params="parent namespace">
+<!-- Macro definition for right hip roll skin unit -->
+<xacro:macro name="hip_roll_R_skin" params="parent namespace">
     <!-- Properties -->
     <xacro:property name="use_mesh_file" value="true" />
-    <xacro:property name="mesh_file" value="${mesh_dir}skin/tof/right_elbow_link_skin.stl" />
+    <xacro:property name="mesh_file" value="${mesh_dir}skin/tof/right_hip_roll_skin.stl" />
     <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
     <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
     <xacro:property name="body_height" value="0.0" /> <!-- [m] -->
@@ -18,8 +18,13 @@
 
     <!--
       STL exported in robot world frame from Blender full-robot scene.
-      mesh_in_world_frame: true in sensors_config.yaml handles rendering.
-      Sensor origins are in right_elbow_link local frame.
+      mesh_in_world_frame: true — mesh drawn at raw world coords (no transform).
+      Right hip is the Y-mirror of the left: sensor_pos / sensor_rpy were
+      mirrored across the robot sagittal plane (Y) from the left-hip table,
+      so positions have flipped Y and rpy is the mirrored rotation. dermis
+      origin places the skin-object frame relative to right_hip_roll_link:
+        world = T_link @ T_dermis @ sensor_pos
+      normal is the outward mesh surface normal at each point.
     -->
     <xacro:dermis_base_macro
     robot_namespace="${namespace}"
@@ -39,10 +44,10 @@
         sensor_number="0"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="-0.593908"
-        normal_y="-0.801301"
-        normal_z="-0.072040">
-        <origin xyz="-0.045 -0.011 -0.005" rpy="1.643 0.053 -0.634" />
+        normal_x="-0.042383"
+        normal_y="-0.997948"
+        normal_z="-0.047987">
+        <origin xyz="0.006 -0.079 -0.118" rpy="1.610 -0.003 0.072" />
     </xacro:self_cap_sensor>
 
 
@@ -52,10 +57,10 @@
         sensor_number="1"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="-0.042045"
-        normal_y="-0.880060"
-        normal_z="0.472997">
-        <origin xyz="-0.001 -0.013 0.042" rpy="1.078 -0.020 -0.037" />
+        normal_x="0.141961"
+        normal_y="-0.989671"
+        normal_z="-0.019940">
+        <origin xyz="0.036 -0.078 -0.041" rpy="1.597 -0.004 0.141" />
     </xacro:self_cap_sensor>
 
 
@@ -65,10 +70,10 @@
         sensor_number="2"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.038000"
-        normal_y="-0.808883"
-        normal_z="-0.586741">
-        <origin xyz="0.002 -0.012 -0.044" rpy="2.198 -0.022 0.031" />
+        normal_x="-0.998868"
+        normal_y="0.044535"
+        normal_z="-0.016738">
+        <origin xyz="-0.007 -0.083 0.000" rpy="1.597 0.001 -0.046" />
     </xacro:self_cap_sensor>
 
 
@@ -78,10 +83,10 @@
         sensor_number="3"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.016999"
-        normal_y="-0.999855"
-        normal_z="-0.001204">
-        <origin xyz="0.002 -0.017 -0.003" rpy="1.572 0.000 0.017" />
+        normal_x="0.999652"
+        normal_y="-0.026273"
+        normal_z="-0.002366">
+        <origin xyz="0.068 -0.017 -0.061" rpy="1.699 -1.122 1.428" />
     </xacro:self_cap_sensor>
 
 
@@ -91,10 +96,10 @@
         sensor_number="4"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.143503"
-        normal_y="-0.989650"
-        normal_z="0.000796">
-        <origin xyz="0.048 -0.014 -0.005" rpy="1.570 0.000 0.144" />
+        normal_x="0.998938"
+        normal_y="-0.045993"
+        normal_z="-0.002585">
+        <origin xyz="0.071 -0.043 0.003" rpy="1.659 -0.882 1.457" />
     </xacro:self_cap_sensor>
 
 
@@ -104,10 +109,10 @@
         sensor_number="5"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.016992"
-        normal_y="-0.999441"
-        normal_z="0.028792">
-        <origin xyz="0.095 -0.010 -0.008" rpy="1.542 0.000 0.017" />
+        normal_x="0.999652"
+        normal_y="-0.026273"
+        normal_z="-0.002366">
+        <origin xyz="0.064 -0.043 -0.122" rpy="1.699 -1.122 1.428" />
     </xacro:self_cap_sensor>
 
 
@@ -117,10 +122,10 @@
         sensor_number="6"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.036663"
-        normal_y="-0.177793"
-        normal_z="0.983385">
-        <origin xyz="0.089 0.021 0.031" rpy="0.179 0.036 0.007" />
+        normal_x="-0.995585"
+        normal_y="-0.018047"
+        normal_z="-0.092116">
+        <origin xyz="-0.080 -0.025 -0.009" rpy="2.077 1.370 -1.056" />
     </xacro:self_cap_sensor>
 
 
@@ -130,10 +135,10 @@
         sensor_number="7"
         sensor_radius="${sensor_radius}"
         sensor_length="0.0"
-        normal_x="0.022085"
-        normal_y="-0.109329"
-        normal_z="-0.993760">
-        <origin xyz="0.089 0.026 -0.054" rpy="3.032 -0.022 0.002" />
+        normal_x="-0.951851"
+        normal_y="-0.016972"
+        normal_z="-0.306090">
+        <origin xyz="-0.063 -0.027 -0.089" rpy="2.571 1.371 -0.562" />
     </xacro:self_cap_sensor>
 
     </xacro:macro>
