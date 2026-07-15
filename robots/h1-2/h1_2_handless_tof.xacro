@@ -41,14 +41,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/pelvis.STL"/>
+        <mesh filename="${mesh_dir}pelvis.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/pelvis.STL"/>
+        <mesh filename="${mesh_dir}pelvis.STL"/>
       </geometry>
     </collision>
   </link>
@@ -63,7 +63,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_hip_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}left_hip_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -84,14 +84,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_hip_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_hip_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_hip_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_hip_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -111,14 +111,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_hip_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_hip_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_hip_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_hip_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -138,7 +138,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_knee_link.STL"/>
+        <mesh filename="${mesh_dir}left_knee_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -169,7 +169,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_ankle_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_ankle_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -190,14 +190,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_ankle_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_ankle_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_ankle_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_ankle_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -222,7 +222,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_hip_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}right_hip_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -243,14 +243,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_hip_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_hip_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_hip_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_hip_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -270,14 +270,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_hip_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_hip_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_hip_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_hip_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -301,7 +301,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_knee_link.STL"/>
+        <mesh filename="${mesh_dir}right_knee_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -332,7 +332,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_ankle_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_ankle_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
@@ -353,14 +353,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_ankle_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_ankle_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_ankle_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_ankle_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -382,14 +382,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/torso_link.STL"/>
+        <mesh filename="${mesh_dir}torso_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/torso_link.STL"/>
+        <mesh filename="${mesh_dir}torso_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -419,14 +419,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -446,14 +446,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -477,14 +477,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_shoulder_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}left_shoulder_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -508,14 +508,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_elbow_link.STL"/>
+        <mesh filename="${mesh_dir}left_elbow_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_elbow_link.STL"/>
+        <mesh filename="${mesh_dir}left_elbow_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -539,13 +539,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_wrist_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_wrist_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <geometry>
-        <mesh filename="${mesh_dir}/left_wrist_roll_link.STL"/>
+        <mesh filename="${mesh_dir}left_wrist_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -566,13 +566,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/left_wrist_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_wrist_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <geometry>
-        <mesh filename="${mesh_dir}/left_wrist_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}left_wrist_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -592,14 +592,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/wrist_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}wrist_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/wrist_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}wrist_yaw_link.STL"/>
       </geometry>
     </collision> -->
   </link>
@@ -621,14 +621,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -648,14 +648,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -680,14 +680,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_shoulder_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}right_shoulder_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -712,14 +712,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_elbow_link.STL"/>
+        <mesh filename="${mesh_dir}right_elbow_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_elbow_link.STL"/>
+        <mesh filename="${mesh_dir}right_elbow_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -743,13 +743,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_wrist_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_wrist_roll_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <geometry>
-        <mesh filename="${mesh_dir}/right_wrist_roll_link.STL"/>
+        <mesh filename="${mesh_dir}right_wrist_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -770,13 +770,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/right_wrist_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_wrist_pitch_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <collision>
       <geometry>
-        <mesh filename="${mesh_dir}/right_wrist_pitch_link.STL"/>
+        <mesh filename="${mesh_dir}right_wrist_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -796,14 +796,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/wrist_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}wrist_yaw_link.STL"/>
       </geometry>
       <xacro:material_grey />
     </visual>
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/wrist_yaw_link.STL"/>
+        <mesh filename="${mesh_dir}wrist_yaw_link.STL"/>
       </geometry>
     </collision> -->
   </link>
@@ -820,7 +820,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/logo_link.STL"/>
+        <mesh filename="${mesh_dir}logo_link.STL"/>
       </geometry>
       <xacro:material_white />
     </visual>

@@ -4,14 +4,16 @@
 
     <xacro:arg name="DEBUG" default="false"/>
 
-    <xacro:include filename="$(find go1_description)/xacro/const.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/materials.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/leg.xacro"/>
-    <!-- <xacro:include filename="$(find go1_description)/xacro/stairs.xacro"/> -->
-    <xacro:include filename="$(find go1_description)/xacro/gazebo.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/depthCamera.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/ultraSound.xacro"/>
-    <!-- <xacro:include filename="$(find go1_gazebo)/launch/stairs.urdf.xacro"/> -->
+    <xacro:property name="mesh_dir" value="package://gentact_ros_tools_hybrid/meshes/go-1/" />
+
+    <xacro:include filename="./const.xacro"/>
+    <xacro:include filename="./materials.xacro"/>
+    <xacro:include filename="./leg.xacro"/>
+    <!-- <xacro:include filename="./stairs.xacro"/> -->
+    <xacro:include filename="./gazebo.xacro"/>
+    <xacro:include filename="./depthCamera.xacro"/>
+    <xacro:include filename="./ultraSound.xacro"/>
+    <!-- <xacro:include filename="./launch/stairs.urdf.xacro"/> -->
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
 
@@ -47,7 +49,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://go1_description/meshes/trunk.dae" scale="1 1 1"/>
+                <mesh filename="${mesh_dir}trunk.dae" scale="1 1 1"/>
             </geometry>
             <!-- <material name="orange"/> -->
         </visual>
@@ -66,6 +68,10 @@
                 izz="${trunk_izz}"/>  
         </inertial>
     </link>
+
+    <xacro:include filename="./skin/trunk_head_skin.xacro" />
+    <!-- namespace is trunk_head so that sensor names are trunk_head_skin -->
+    <xacro:trunk_head_skin parent="base" namespace="trunk_head" />    
 
     <joint name="imu_joint" type="fixed">
         <parent link="trunk"/>
@@ -98,6 +104,24 @@
     <xacro:leg name="FL" mirror="1"  mirror_dae="True"   front_hind="1"  front_hind_dae="True"  />
     <xacro:leg name="RR" mirror="-1" mirror_dae="False"  front_hind="-1" front_hind_dae="False" />
     <xacro:leg name="RL" mirror="1"  mirror_dae="True"   front_hind="-1" front_hind_dae="False" />
+
+    <xacro:include filename="./skin/left_calf_skin.xacro" />
+    <xacro:left_calf_skin parent="FL_calf" namespace="left_calf" />    
+
+    <xacro:include filename="./skin/right_calf_skin.xacro" />
+    <xacro:right_calf_skin parent="FR_calf" namespace="right_calf" />    
+
+    <xacro:include filename="./skin/left_thighcap_skin.xacro" />
+    <xacro:left_thighcap_skin parent="FL_thigh" namespace="left_thighcap" />        
+    <xacro:include filename="./skin/right_thighcap_skin.xacro" />
+    <xacro:right_thighcap_skin parent="FR_thigh" namespace="right_thighcap" />   
+
+    <xacro:include filename="./skin/left_thigh_skin.xacro" />
+    <xacro:left_thigh_skin parent="FL_thigh" namespace="left_thigh" />   
+
+    <xacro:include filename="./skin/right_thigh_skin.xacro" />
+    <xacro:right_thigh_skin parent="FR_thigh" namespace="right_thigh" />    
+    
 
     <xacro:depthCamera camID="1" name="face">
         <origin rpy="${PI} 0 0" xyz="0.2785 0.0125 0.0167"/>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!-- Macro definition for skin unit -->
+<xacro:macro name="right_calf_skin" params="parent namespace">
+    <!-- Properties -->
+    <xacro:property name="use_mesh_file" value="true" />
+    <xacro:property name="mesh_file" value="${mesh_dir}skin/calf/right_calf_skin.stl" />
+    <xacro:property name="mass" value="0.0" /> <!-- [kg] -->
+    <xacro:property name="body_width" value="0.0" /> <!-- [m] -->
+    <xacro:property name="body_height" value="0.0" /> <!-- [m] -->
+    <xacro:property name="sensor_length" value="0.0" /> <!-- [m] -->
+    <xacro:property name="sensor_radius" value="0.0" /> <!-- [m] -->
+
+    <!-- Included URDF Files (NEEDED FOR BASE SKIN UNIT) -->
+    <xacro:include filename="$(find gentact_descriptions_hybrid)/robots/common/skin_unit_base.xacro" />
+
+    <!-- Instantiate dermis once -->
+    <xacro:dermis_base_macro
+    robot_namespace="${namespace}"
+    parent="${parent}"
+    mass="${mass}"
+    body_width="${body_width}"
+    body_height="${body_height}"
+    use_mesh_file="${use_mesh_file}"
+    mesh_file="${mesh_file}">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:dermis_base_macro>
+
+        
+    <xacro:self_cap_sensor
+        robot_namespace="${namespace}"
+        parent="${namespace}_skin"
+        sensor_number="0"
+        sensor_radius="${sensor_radius}"
+        sensor_length="0.0"
+        normal_x="1.399418592453003"
+        normal_y="-0.006176819559186697"
+        normal_z="1.6344972848892212">
+        <origin xyz="0.019498806446790695 -0.049040064215660095 -0.05849837511777878" rpy="-1.1059939861297607 1.1805095672607422 -1.0739465951919556" />
+    </xacro:self_cap_sensor>
+            
+
+    <xacro:self_cap_sensor
+        robot_namespace="${namespace}"
+        parent="${namespace}_skin"
+        sensor_number="1"
+        sensor_radius="${sensor_radius}"
+        sensor_length="0.0"
+        normal_x="-1.5278453826904297"
+        normal_y="0.34603866934776306"
+        normal_z="-0.048681531101465225">
+        <origin xyz="0.011232872493565083 -0.05911950021982193 -0.1660645753145218" rpy="-1.5303928852081299 0.002556422259658575 -0.0631539449095726" />
+    </xacro:self_cap_sensor>
+            
+    </xacro:macro>
+
+</robot>
+        
